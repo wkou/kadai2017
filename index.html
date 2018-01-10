@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>課題2017</title>
+    <script src="https://www.gstatic.com/charts/loader.js">
+    </script>
+    <script>
+        (function () {
+            'use strict'
+
+            function drawTable1() {
+                var target = document.getElementById('target1');
+                var data;
+                var options = {
+                    width: 400,
+                    height: 400
+                };
+                var table = new google.visualization.Table(target);
+
+                data = new google.visualization.arrayToDataTable([
+                ['市区町村名', '昼間人口', '夜間人口', '昼夜間人口比率'],
+                ['岐阜市', 428926, 413136, 1.0382],
+                ['大垣市', 169980, 161160, 1.0547],
+                ['高山市', 94121, 92747, 1.0148],
+                ['多治見市', 97967, 112595, 0.8701],
+                ['関市', 91473, 91418, 1.0006],
+                ['中津川市', 80202, 80910, 0.9912],
+                ['美濃市', 22616, 22629, 0.9994],
+                ['瑞浪市', 36938, 40387, 0.9146],
+                ['羽島市', 57563, 67197, 0.8566],
+                ['恵那市', 51600, 53718, 0.9606],
+                ['美濃加茂市', 56467, 54729, 1.0318],
+                ['土岐市', 56041, 60475, 0.9267],
+                ['各務原市', 135699, 145604, 0.932],
+                ['可児市', 89713, 97436, 0.9207],
+                ['山県市', 25442, 29629, 0.8587],
+                ['瑞穂市', 42490, 51950, 0.8179],
+                ['飛騨市', 25651, 26732, 0.9596],
+                ['本巣市', 34001, 35047, 0.9702],
+                ['郡上市', 43555, 44491, 0.979],
+                ['下呂市', 36193, 36314, 0.9967],
+                ['海津市', 32372, 37941, 0.8532],
+                ['岐南町', 23682, 23804, 0.9949],
+                ['笠松町', 21305, 22809, 0.9341],
+                ['養老町', 26653, 31332, 0.8507],
+                ['垂井町', 24945, 28505, 0.8751],
+                ['関ケ原町', 7790, 8096, 0.9622],
+                ['神戸町', 17070, 20065, 0.8507],
+                ['輪之内町', 9345, 10028, 0.9319],
+                ['安八町', 14478, 15271, 0.9481],
+                ['揖斐川町', 22434, 23784, 0.9432],
+                ['大野町', 19090, 23859, 0.8001],
+                ['池田町', 21102, 24980, 0.8448],
+                ['北方町', 14653, 18395, 0.7966],
+                ['坂祝町', 7649, 8361, 0.9148],
+                ['富加町', 4983, 5516, 0.9034],
+                ['川辺町', 8838, 10593, 0.8343],
+                ['七宗町', 3706, 4484, 0.8265],
+                ['八百津町', 10828, 12045, 0.899],
+                ['白川町', 8857, 9530, 0.9294],
+                ['東白川村', 2327, 2514, 0.9256],
+                ['御嵩町', 17029, 18824, 0.9046],
+                ['白川村', 1772, 1733, 1.0225]
+
+
+
+            ]);
+
+                table.draw(data, options);
+
+            }
+
+            google.charts.load('current', {
+                'packages': ['table']
+            });
+            google.charts.setOnLoadCallback(drawTable1);
+
+
+            function drawChart1() {
+                var target = document.getElementById('target2');
+                var data;
+                var options = {
+                    width: 500,
+                    height: 300,
+                    vAxis: {
+                        title: '（人）',
+                    }
+                };
+                var chart = new google.visualization.LineChart(target);
+
+                data = new google.visualization.arrayToDataTable([
+                ['年', '流出者数', '流入者数'],
+                ['2000', 37733, 22516],
+                ['2005', 37177, 23113],
+                ['2010', 34684, 24779],
+                ['2015', 35898, 26443]
+
+            ]);
+                chart.draw(data, options);
+            }
+
+            google.charts.load('current', {
+                packages: ['corechart']
+            });
+            google.charts.setOnLoadCallback(drawChart1);
+
+
+            function drawTable2() {
+                var target = document.getElementById('target3');
+                var data;
+                var options = {
+                    width: 400,
+                    height: 200
+                };
+                var table = new google.visualization.Table(target);
+
+                data = new google.visualization.arrayToDataTable([
+                ['年', '第1次産業就業者数(人)', '第1次産業', '第2次産業', '第3次産業'],
+                ['2005', 1276, 1.8, 35.4, 62.1],
+                ['2010', 963, 1.4, 34.3, 64.3],
+                ['2015', 945, 1.4, 34.4, 64.2],
+
+            ]);
+
+                table.draw(data, options);
+
+            }
+
+            google.charts.load('current', {
+                'packages': ['table']
+            });
+            google.charts.setOnLoadCallback(drawTable2);
+
+
+            function drawChart2() {
+                var target = document.getElementById('target4');
+                var data;
+                var options = {
+                    width: 500,
+                    height: 300,
+                    hAxis: {
+                        title: '耕作放棄地率（％）',
+                    }
+                };
+                var chart = new google.visualization.BarChart(target);
+
+                data = new google.visualization.arrayToDataTable([
+                ['年', '各務原市', '岐阜県', '全国'],
+                ['2005', 14.32, 11.61, 9.66],
+                ['2010', 17.87, 12.67, 10.56]
+
+            ]);
+                chart.draw(data, options);
+            }
+
+            google.charts.load('current', {
+                packages: ['corechart']
+            });
+            google.charts.setOnLoadCallback(drawChart2);
+        })();
+    </script>
+
+
+</head>
+
+<body>
+
+    <h3 class="alert alert-primary">各務原のデータ</h3>
+    <h4 class="alert alert-info">岐阜県内の市町村における昼夜間人口比率</h4>
+    <div id="target1" class="d-none d-sm-block"></div>
+    <div>RESASより作成</div>
+    <br>
+    <div>
+        <p>多くの市町村において夜間人口が昼間人口を上回っている。 各務原市も夜間人口が上回っており、昼間は市外へ出る人が多いことがわかる。
+        </p>
+    </div>
+    <br>
+    <h4 class="alert alert-info">流出入者の変化</h4>
+    <div id="target2" class="d-none d-sm-block"></div>
+    <div>RESASより作成</div>
+    <br>
+    <div>
+        <p>各務原市における昼間の流出入者（通勤・通学による）の変化を表したもの。</p>
+        <p>流入者は増加傾向にあり、流出者は減少傾向にある。</p>
+    </div>
+    <br>
+    <h4 class="alert alert-info">各務原市の産業</h4>
+    <div id="target3" class="d-none d-sm-block"></div>
+    <div>RESASより作成</div>
+    <br>
+    <div>
+        <p>各務原市の第一次産業就業者数と各産業の就業者の割合をまとめたもの。</p>
+        <p>第一次産業就業者の割合はほとんど変化がないが、第一次産業就業者数は年々減少している。</p>
+    </div>
+    <br>
+    <h4 class="alert alert-info">耕作放棄地率</h4>
+    <div id="target4" class="d-none d-sm-block"></div>
+    <div>RESASより作成</div>
+    <br>
+    <div>
+        <p>各務原市の耕作放棄地率を岐阜県平均、全国平均と比較したもの。</p>
+        <p>各務原市の耕作放棄地率は県平均や全国平均と比べて高い。</p>
+        <p>また、2010年は2005年と比べて耕作放棄地率が高くなっている。</p>
+    </div>
+    
+    <hr>
+    <footer>
+        <div>参考サイト</div>
+        <a href="https://resas.go.jp">RESAS</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
