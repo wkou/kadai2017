@@ -7,7 +7,59 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <title>課題2017</title>
-    <script src="https://www.gstatic.com/charts/loader.js">
+    
+</head>
+
+<body>
+
+    <h3 class="alert alert-primary">各務原のデータ</h3>
+    <h4 class="alert alert-info">岐阜県内の市町村における昼夜間人口比率</h4>
+    <div id="target1" class="d-none d-sm-block"></div>
+    <div class="d-none d-sm-block">RESASより作成</div>
+    <br>
+    <div>
+        <p>多くの市町村において夜間人口が昼間人口を上回っている。 各務原市も夜間人口が上回っており、昼間は市外へ出る人が多いことがわかる。
+        </p>
+    </div>
+    <br>
+    <h4 class="alert alert-info">流出入者の変化</h4>
+    <div id="target2" class="d-none d-sm-block"></div>
+    <div class="d-none d-sm-block">RESASより作成</div>
+    <br>
+    <div>
+        <p>各務原市における昼間の流出入者（通勤・通学による）の変化を表したもの。</p>
+        <p>流入者は増加傾向にあり、流出者は減少傾向にある。</p>
+    </div>
+    <br>
+    <h4 class="alert alert-info">各務原市の産業</h4>
+    <div id="target3" class="d-none d-sm-block"></div>
+    <div class="d-none d-sm-block">RESASより作成</div>
+    <br>
+    <div>
+        <p>各務原市の第一次産業就業者数と各産業の就業者の割合をまとめたもの。</p>
+        <p>第一次産業就業者の割合はほとんど変化がないが、第一次産業就業者数は年々減少している。</p>
+    </div>
+    <br>
+    <h4 class="alert alert-info">耕作放棄地率</h4>
+    <div id="target4" class="d-none d-sm-block"></div>
+    <div class="d-none d-sm-block">RESASより作成</div>
+    <br>
+    <div>
+        <p>各務原市の耕作放棄地率を岐阜県平均、全国平均と比較したもの。</p>
+        <p>各務原市の耕作放棄地率は県平均や全国平均と比べて高い。</p>
+        <p>また、2010年は2005年と比べて耕作放棄地率が高くなっている。</p>
+    </div>
+    
+    <hr>
+    <footer>
+        <div>参考サイト</div>
+        <a href="https://resas.go.jp">RESAS</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+　　<script src="https://www.gstatic.com/charts/loader.js">
     </script>
     <script>
         (function () {
@@ -164,60 +216,6 @@
             google.charts.setOnLoadCallback(drawChart2);
         })();
     </script>
-
-
-</head>
-
-<body>
-
-    <h3 class="alert alert-primary">各務原のデータ</h3>
-    <h4 class="alert alert-info">岐阜県内の市町村における昼夜間人口比率</h4>
-    <div id="target1" class="d-none d-sm-block"></div>
-    <div class="d-none d-sm-block">RESASより作成</div>
-    <br>
-    <div>
-        <p>多くの市町村において夜間人口が昼間人口を上回っている。 各務原市も夜間人口が上回っており、昼間は市外へ出る人が多いことがわかる。
-        </p>
-    </div>
-    <br>
-    <h4 class="alert alert-info">流出入者の変化</h4>
-    <div id="target2" class="d-none d-sm-block"></div>
-    <div class="d-none d-sm-block">RESASより作成</div>
-    <br>
-    <div>
-        <p>各務原市における昼間の流出入者（通勤・通学による）の変化を表したもの。</p>
-        <p>流入者は増加傾向にあり、流出者は減少傾向にある。</p>
-    </div>
-    <br>
-    <h4 class="alert alert-info">各務原市の産業</h4>
-    <div id="target3" class="d-none d-sm-block"></div>
-    <div class="d-none d-sm-block">RESASより作成</div>
-    <br>
-    <div>
-        <p>各務原市の第一次産業就業者数と各産業の就業者の割合をまとめたもの。</p>
-        <p>第一次産業就業者の割合はほとんど変化がないが、第一次産業就業者数は年々減少している。</p>
-    </div>
-    <br>
-    <h4 class="alert alert-info">耕作放棄地率</h4>
-    <div id="target4" class="d-none d-sm-block"></div>
-    <div class="d-none d-sm-block">RESASより作成</div>
-    <br>
-    <div>
-        <p>各務原市の耕作放棄地率を岐阜県平均、全国平均と比較したもの。</p>
-        <p>各務原市の耕作放棄地率は県平均や全国平均と比べて高い。</p>
-        <p>また、2010年は2005年と比べて耕作放棄地率が高くなっている。</p>
-    </div>
-    
-    <hr>
-    <footer>
-        <div>参考サイト</div>
-        <a href="https://resas.go.jp">RESAS</a>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
